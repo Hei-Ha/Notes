@@ -1,0 +1,9 @@
+{
+    "language": "zh-hans",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "search-pro",
+        "back-to-top-button"
+    ]
+}
