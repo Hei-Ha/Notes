@@ -1,5 +1,15 @@
 {
+    "author": "HeiHa",
+    "description": "日常整理",
     "language": "zh-hans",
+    "root": ".",
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
     "plugins": [
         "-lunr",
         "-search",
