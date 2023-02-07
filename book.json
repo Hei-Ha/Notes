@@ -4,6 +4,7 @@
         "-lunr",
         "-search",
         "search-pro",
-        "back-to-top-button"
+        "back-to-top-button",
+        "code"
     ]
 }

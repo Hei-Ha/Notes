@@ -1,0 +1,368 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>原型和原型链 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../gitOperate/" />
+    
+    
+    <link rel="prev" href="undefined和null的区别.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="undefined和null的区别.html">
+            
+                <a href="undefined和null的区别.html">
+            
+                    
+                    undefined 和 null 的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="原型和原型链.html">
+            
+                <a href="原型和原型链.html">
+            
+                    
+                    原型和原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../gitOperate/">
+            
+                <a href="../../gitOperate/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../regEx/">
+            
+                <a href="../../regEx/">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >原型和原型链</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x539F;&#x578B;&#x94FE;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x8BF4;&#x4E00;&#x8BF4;&#x539F;&#x578B;&#x94FE;&#x3002;">&#x539F;&#x578B;&#x94FE;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x8BF4;&#x4E00;&#x8BF4;&#x539F;&#x578B;&#x94FE;&#x3002;</h2>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; x = {}, &#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#xFF0C;&#x53EB; <strong>**???</strong>**, &#x8FD9;&#x4E2A;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#xFF0C;&#x6307;&#x5411; Object.prototype&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-plain">x.__???__ === Object.prototype
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;&#xFF1A;x &#x7684;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#xFF0C;&#x7B49;&#x4E8E; Object.prototype&#x3002;&#x5728;&#x8FD9;&#x91CC; x &#x7684;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x662F; x &#x7684;&#x539F;&#x578B;&#xFF0C;&#x5373;&#xFF1A; <strong>proto</strong></p>
+<p>&#x8FD9;&#x662F;&#x539F;&#x578B;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A; &#x6570;&#x7EC4; Y = [], &#x5B83;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x5C5E;&#x6027; <strong>proto**</strong>**, &#x8FD9;&#x4E2A;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#xFF0C;&#x6307;&#x5411; Array.prototype, &#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-plain">Y.__proto__ === Array.prototype
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;&#xFF1A;Y &#x7684;&#x539F;&#x578B;&#xFF0C;&#x7B49;&#x4E8E; Array.prototype &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x4E0E;&#x6B64;&#x540C;&#x65F6;&#xFF0C;Array &#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x5C5E;&#x6027; <strong>proto</strong>&#xFF0C;&#x5B83;&#x7B49;&#x4E8E; Object.prototype, &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-plain">Array.__proto__ === Object.prototype
+</code></pre>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x7EC8;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-plain">Y.__proto__ =&gt; Array.__proto__ =&gt; Object.prototype
+</code></pre>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x539F;&#x578B;&#x94FE;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x53EA;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x624D;&#x6709; prototype &#x5C5E;&#x6027;&#x3002;</p>
+<p>js &#x4E2D;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x6709; <strong>**proto</strong>**  &#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x539F;&#x578B;&#x94FE;&#x3002;">&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x539F;&#x578B;&#x94FE;&#x3002;</h2>
+<p>&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x7684;&#x9690;&#x85CF;&#x5C5E;&#x6027;&#x6307;&#x5411;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-plain">&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x51FD;&#x6570; function F () {}
+Y = Object.create(F)
+Y.__proto__ === F.prototype
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x5F62;&#x6210;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x94FE;&#xFF1A;</p>
+<pre><code class="lang-plain">Y.__proto__ === F.prototype === Object.prototype
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x94FE;&#x6761;&#xFF0C;&#x65B0;&#x7684;&#x539F;&#x578B;&#x94FE;&#x3002;</p>
+<h2 id="&#x539F;&#x578B;&#x94FE;&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;">&#x539F;&#x578B;&#x94FE;&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</h2>
+<pre><code class="lang-plain">&#x5728;&#x6CA1;&#x6709; Class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x7EE7;&#x627F;&#x3002;
+</code></pre>
+<h2 id="&#x539F;&#x578B;&#x94FE;&#x7F3A;&#x70B9;">&#x539F;&#x578B;&#x94FE;&#x7F3A;&#x70B9;</h2>
+<pre><code class="lang-plain">&#x4E0E; class &#x76F8;&#x6BD4;&#xFF0C;&#x5199;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x50CF; java &#x90A3;&#x6837;&#x6709;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x3002;
+&#x5728; &#x7236;&#x5BF9;&#x8C61;&#x4E0A;&#x58F0;&#x660E; __ &#x5F00;&#x5934;&#x8FD9;&#x6837;&#x7684;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x5B50;&#x5BF9;&#x8C61;&#x4E5F;&#x662F;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x9ED8;&#x8BA4;&#x7EA6;&#x5B9A;&#x4E0D;&#x8BBF;&#x95EE; __ &#x5F00;&#x5934;&#x7684;&#x5C5E;&#x6027;&#x3002;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="undefined和null的区别.html" class="navigation navigation-prev " aria-label="Previous page: undefined 和 null 的区别">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../gitOperate/" class="navigation navigation-next " aria-label="Next page: Git">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"原型和原型链","level":"1.2.1.2","depth":3,"next":{"title":"Git","level":"1.3","depth":1,"path":"src/gitOperate/README.md","ref":"src/gitOperate/README.md","articles":[]},"previous":{"title":"undefined 和 null 的区别","level":"1.2.1.1","depth":3,"path":"src/frontEnd/js/undefined和null的区别.md","ref":"src/frontEnd/js/undefined和null的区别.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"back-to-top-button":{},"code":{"copyButtons":true},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"src/frontEnd/js/原型和原型链.md","mtime":"2023-02-07T03:17:42.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-07T03:27:32.891Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

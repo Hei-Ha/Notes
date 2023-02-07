@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>前端 · GitBook</title>
+        <title>正则表达式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="js/" />
     
-    
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="../gitOperate/" />
     
 
     </head>
@@ -110,9 +108,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../frontEnd/">
             
-                <a href="./">
+                <a href="../frontEnd/">
             
                     
                     前端
@@ -124,9 +122,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="js/">
+        <li class="chapter " data-level="1.2.1" data-path="../frontEnd/js/">
             
-                <a href="js/">
+                <a href="../frontEnd/js/">
             
                     
                     JS
@@ -138,9 +136,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.1" data-path="js/undefined和null的区别.html">
+        <li class="chapter " data-level="1.2.1.1" data-path="../frontEnd/js/undefined和null的区别.html">
             
-                <a href="js/undefined和null的区别.html">
+                <a href="../frontEnd/js/undefined和null的区别.html">
             
                     
                     undefined 和 null 的区别
@@ -151,9 +149,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.2" data-path="js/原型和原型链.html">
+        <li class="chapter " data-level="1.2.1.2" data-path="../frontEnd/js/原型和原型链.html">
             
-                <a href="js/原型和原型链.html">
+                <a href="../frontEnd/js/原型和原型链.html">
             
                     
                     原型和原型链
@@ -187,9 +185,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../regEx/">
+        <li class="chapter active" data-level="1.4" data-path="./">
             
-                <a href="../regEx/">
+                <a href="./">
             
                     
                     正则表达式
@@ -230,7 +228,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >前端</a>
+        <a href="../.." >正则表达式</a>
     </h1>
 </div>
 
@@ -245,7 +243,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="js-&#x77E5;&#x8BC6;&#x70B9;">JS &#x77E5;&#x8BC6;&#x70B9;</h2>
+                                <h3 id="&#x6570;&#x5B57;&#x6BCF;&#x4E09;&#x4F4D;&#x6DFB;&#x52A0;&#x9017;&#x53F7;">&#x6570;&#x5B57;&#x6BCF;&#x4E09;&#x4F4D;&#x6DFB;&#x52A0;&#x9017;&#x53F7;</h3>
+<pre><code class="lang-js"><span class="hljs-built_in">String</span>(<span class="hljs-number">123456789</span>).replace(<span class="hljs-regexp">/(?&lt;!^.*\..*)(?&lt;=\d)((?=[^.]+\.)(?=(\d\d\d)+\.)|(?![^.]+\..*$)(?=(\d\d\d)+$))/g</span>, <span class="hljs-string">&apos;,&apos;</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -273,14 +273,10 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                <a href="../gitOperate/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="js/" class="navigation navigation-next " aria-label="Next page: JS">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -289,7 +285,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"前端","level":"1.2","depth":1,"next":{"title":"JS","level":"1.2.1","depth":2,"path":"src/frontEnd/js/README.md","ref":"src/frontEnd/js/README.md","articles":[{"title":"undefined 和 null 的区别","level":"1.2.1.1","depth":3,"path":"src/frontEnd/js/undefined和null的区别.md","ref":"src/frontEnd/js/undefined和null的区别.md","articles":[]},{"title":"原型和原型链","level":"1.2.1.2","depth":3,"path":"src/frontEnd/js/原型和原型链.md","ref":"src/frontEnd/js/原型和原型链.md","articles":[]}]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"back-to-top-button":{},"code":{"copyButtons":true},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"src/frontEnd/README.md","mtime":"2023-02-07T03:18:55.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-07T03:27:32.891Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"正则表达式","level":"1.4","depth":1,"previous":{"title":"Git","level":"1.3","depth":1,"path":"src/gitOperate/README.md","ref":"src/gitOperate/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","back-to-top-button","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"back-to-top-button":{},"code":{"copyButtons":true},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"src/regEx/README.md","mtime":"2023-02-07T03:23:49.431Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-07T03:27:32.891Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
