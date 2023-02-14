@@ -24,6 +24,8 @@
         * [实现继承](src/frontEnd/handWritten/实现继承.md)
         * [实现一个类](src/frontEnd/handWritten/实现一个类.md)
         * [发布订阅](src/frontEnd/handWritten/发布订阅.md)
+    * [html](src/frontEnd/README.md)
+      * [SVG 和 Canvas的区别](src/frontEnd/html/SVG和Canvas的区别.md)
 * [Git](src/gitOperate/README.md)
 * [常用正则表达式](src/regEx/README.md)
 
