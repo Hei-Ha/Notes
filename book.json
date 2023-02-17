@@ -16,6 +16,8 @@
         "search-pro",
         "back-to-top-button",
         "code",
-        "livereload"
-    ]
+        "livereload",
+        "chapter-fold"
+    ],
+    "pluginConfig": {}
 }
