@@ -1,7 +1,7 @@
 ## git 常用命令
 
 ### 合并commit 为一个
-```js
+```shell
 // 合并指定版本号（不包含此版本）
 git rebase -i [commitid]
 
@@ -9,6 +9,12 @@ git rebase -i [commitid]
 ```
 
 ### 拉取远程分支到本地
-```js
+```shell
 git checkout -b 本地新建的分支名 origin/远程分支名
+```
+
+
+### 删除远程分支
+```shell
+git push --delete origin branch_name
 ```
