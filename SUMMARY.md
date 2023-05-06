@@ -26,6 +26,7 @@
         * [发布订阅](src/frontEnd/handWritten/发布订阅.md)
     * [HTML](src/frontEnd/html/README.md)
       * [SVG 和 Canvas的区别](src/frontEnd/html/SVG和Canvas的区别.md)
+      * [defer 和 async 的异同点](src/frontEnd/html/defer和async异同点.md) 
     * [浏览器](src/frontEnd/浏览器/README.md)
       * [session、cookie、localStorage、sessionStorage区别](src/frontEnd/浏览器/Session_Cookie_LocalStorage_SessionStorage.md)
     * [计算机网络](src/frontEnd/计算机网络/README.md)
