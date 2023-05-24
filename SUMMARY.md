@@ -14,7 +14,7 @@
       * [回流、重绘](src/frontEnd/css/reflowRepaint.md)
       * [清除浮动](src/frontEnd/css/clearFloat.md)
       * [水平垂直居中方法](src/frontEnd/css/水平垂直居中.md)
-    * [手写](src/frontEnd/handWritten/README.md)
+    * [手写系列](src/frontEnd/handWritten/README.md)
         * [手写：call、apply、bind](src/frontEnd/handWritten/call,apply,bind.md)
         * [手写：数组去重](src/frontEnd/handWritten/数组去重.md)
         * [深拷贝](src/frontEnd/handWritten/深拷贝.md)
