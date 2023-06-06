@@ -44,8 +44,10 @@
     * [TypeScript](src/frontEnd/TypeScript/README.md)
     * [前端安全](src/frontEnd/前端安全/README.md)
       * [CSRF攻击](src/frontEnd/前端安全/CSRF攻击.md)
-* [webpack](src/构建工具/README.md)
+* [构建工具](src/构建工具/README.md)
   * [webpack 构建流程](src/构建工具/webpack构建流程.md)
+  * [webpack 和 vite 的区别](src/构建工具/webpack和vite的区别.md)
+  * [如何提高 webpack 的构建速度](src/构建工具/如何提高webpack的构建速度.md)
 * [Git](src/gitOperate/README.md)
 * [常用正则表达式](src/regEx/README.md)
 
