@@ -18,3 +18,7 @@ git checkout -b 本地新建的分支名 origin/远程分支名
 ```shell
 git push --delete origin branch_name
 ```
+### 修改上次的 commit message\
+```shell
+git commit --amend --message="new message"
+```
