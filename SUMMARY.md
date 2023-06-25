@@ -41,6 +41,8 @@
     * [React](src/frontEnd/React/README.md)
       * [React Diff](src/frontEnd/React/React_Diff.md)
       * [React 生命周期](src/frontEnd/React/React生命周期.md)
+      * [React 的 Hooks](src/frontEnd/React/React的hooks.md)
+      * [React 的合成事件及优势](src/frontEnd/React/React合成事件及优势.md)
     * [TypeScript](src/frontEnd/TypeScript/README.md)
       * [TS常用工具类](src/frontEnd/TypeScript/TS常用工具类.md)
     * [前端安全](src/frontEnd/前端安全/README.md)
