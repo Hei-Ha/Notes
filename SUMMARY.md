@@ -37,6 +37,7 @@
       * [HTTP 状态码](src/frontEnd/HTTP相关/HTTP状态码.md)
       * [HTTP 版本区别](src/frontEnd/HTTP相关/HTTP各版本的区别.md)
       * [三次握手、四次挥手](src/frontEnd/HTTP相关/三次握手_四次挥手.md)
+      * [get和post的区别](src/frontEnd/HTTP相关/get和post的区别.md)
     * [Vue](src/frontEnd/Vue/README.md)
       * [Vue的双向绑定](src/frontEnd/Vue/vue双向绑定.md)
       * [Vue的Diff算法](src/frontEnd/Vue/Vue的Diff算法.md)
