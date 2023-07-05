@@ -1,7 +1,7 @@
 ## React 有哪些 hooks
 ##### useState()：状态钩子
 - useState()用于为函数组件引入状态（state）；
-##### useContext(): 共享状态钩子
+##### useContext(someContext): 共享状态钩子
 - 如果需要在组件之间共享状态，可以使用useContext()。
 ##### useEffect()：副作用钩子。
 - useEffect()用来引入具有副作用的操作，
@@ -11,9 +11,19 @@
 ##### useReducer()：action 钩子
 - 类似于 Redux 思想的实现，但其并不足以替代 Redux，可以理解成一个组件内部的 redux，并不是持久化存储，会随着组件被销毁而销毁；
 
-##### useCallback()
+##### useCallback(fn, dependencies)
 - 缓存回调函数，避免传入的回调每次都是新的函数实例而导致依赖组件重新渲染，具有性能优化的效果；
-
+##### useMemo(fn, dependencies)
+- 缓存 fn 的计算结果，只有 dependencies 改变的时候才重新计算 fn 的结果。 
+##### useId() 生成一个唯一的 ID
+- 一般给无障碍属性使用
+##### useDebugValue(value, format?)
+- 没有返回值，在 react 调试工具中，显示 format 后的 value
+##### useLayoutEffect(setup, dependencies)
+- 在浏览器重新绘制界面前触发  fn , 
+- 使用场景: 例如 tooltip 的显示位置。
+##### useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)
+- 订阅外部的 store ，例如第三方状态库...
 
 
 ## 什么是 hooks?
