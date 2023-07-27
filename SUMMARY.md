@@ -59,5 +59,11 @@
   * [如何提高 webpack 的构建速度](src/构建工具/如何提高webpack的构建速度.md)
 * [Git](src/gitOperate/README.md)
 * [常用正则表达式](src/regEx/README.md)
-
+* [算法](src/算法)
+  * [二分查找](src/算法/二分查找.md)
+  * [冒泡排序](src/算法/冒泡排序.md)
+  * [归并排序](src/算法/归并排序.md)
+  * [快速排序](src/算法/快速排序.md)
+  * [插入排序](src/算法/插入排序.md)
+  * [选择排序](src/算法/选择排序.md)
 
